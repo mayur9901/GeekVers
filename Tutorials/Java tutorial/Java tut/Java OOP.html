@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java OOPs</title>
+    <link rel="stylesheet" href="D:\GeekVers\Home.css">
+    <style>
+        p,pre,ul,ol{
+            font-size: large;
+        }
+        body{
+            background-color: rgb(222, 255, 222);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation menu -->
+    <div>
+        <img src="C:\Users\ASUS\Pictures\Logo.jpg" width="292" height="49">
+    </div>
+    <br><br>
+    <div style="background-color: rgb(28, 235, 28);">
+        <a href="D:\GeekVers\index.html" class="navmenu">Home</a>
+        <a href="D:\GeekVers\Tutorials\Tutorials.html" class="navmenu">Tutorials</a>
+        <a href="D:\GeekVers\Examples\Examples.html" class="navmenu">Examples</a>
+        <a href="D:\GeekVers\Questions\Questions.html" class="navmenu">Questions</a>
+        <a href="D:\GeekVers\Code Editor\Code editor.html" class="navmenu">Code Editor</a>
+        <a href="D:\GeekVers\Contact us\Contact.html" class="navmenu">Contact US</a>
+    </div><br>
+    <!-- Java opps concepts -->
+    <h1>Java OOPs</h1>
+    <h2>OOPs (Object-Oriented Programming System)</h2>
+    <p>Object means a real-world entity such as a pen, chair, table, computer, watch, etc. Object-Oriented Programming is a methodology or paradigm to design a program using classes and objects.</p>
+    
+    <h2>Object</h2>
+    <p>Any entity that has state and behavior is known as an object. For example, a chair, pen, table, keyboard, bike, etc. It can be physical or logical.</p>
+    <p>An Object can be defined as an instance of a class. An object contains an address and takes up some space in memory. Objects can communicate without knowing the details of each other's data or code. The only necessary thing is the type of message accepted and the type of response returned by the objects.</p>
+    <p><b>Example:</b> A dog is an object because it has states like color, name, breed, etc. as well as behaviors like wagging the tail, barking, eating, etc.</p>
+    
+    <h2>Class</h2>
+    <p>Collection of objects is called class. It is a logical entity.A class can also be defined as a blueprint from which you can create an individual object. Class doesn't consume any space.</p>
+
+    <h2>Create a Class and Object</h2>
+    <p>To create a class, use the keyword class.</p>
+    <p>In Java, an object is created from a class.To create an object of Main, specify the class name, followed by the object name, and use the keyword new.</p>
+    <h3>Example</h3>
+    <pre>
+public class Main {
+    int x = 5;
+          
+    public static void main(String[] args) {
+        Main myObj = new Main();    // This is object
+        System.out.println(myObj.x);
+    }
+}
+// Output:5
+    </pre>
+    <h2>Java Class Attributes</h2>
+    <p>In the previous chapter, we used the term "variable" for x in the example (as shown below). It is actually an attribute of the class. Or you could say that class attributes are variables within a class:</p>
+    <h3>Example</h3>
+    <pre>
+public class Main {
+    int x = 5;
+    int y = 3;
+}
+    </pre>
+    <h2>Accessing Attributes</h2>
+    <p>You can access attributes by creating an object of the class, and by using the dot syntax (.):</p>
+    <p>The following example will create an object of the Main class, with the name myObj. We use the x attribute on the object to print its value:</p>
+    <h3>Example</h3>
+    <pre>
+public class Main {
+    int x = 5;
+          
+    public static void main(String[] args) {
+        Main myObj = new Main();
+        System.out.println(myObj.x);
+    }
+}
+
+// Output : 5
+    </pre>
+    <h2>Modify Attributes</h2>
+    <h3>Example</h3>
+    <pre>
+public class Main {
+    int x = 10;
+          
+    public static void main(String[] args) {
+        Main myObj = new Main();
+        myObj.x = 25; // x is now 25
+        System.out.println(myObj.x);
+    }
+}
+
+// Output : 25
+    </pre>
+    <h1>Java Class Methods</h1>
+    <h2>Access Methods With an Object</h2>
+    <h2>Example</h2>
+    <pre>
+// Create a Main class
+public class Main {
+ 
+  // Create a fullThrottle() method
+  public void fullThrottle() {
+    System.out.println("The car is going as fast as it can!");
+  }
+
+  // Create a speed() method and add a parameter
+  public void speed(int maxSpeed) {
+    System.out.println("Max speed is: " + maxSpeed);
+  }
+
+  // Inside main, call the methods on the myCar object
+  public static void main(String[] args) {
+    Main myCar = new Main();     // Create a myCar object
+    myCar.fullThrottle();      // Call the fullThrottle() method
+    myCar.speed(200);          // Call the speed() method
+  }
+}
+    </pre>
+    <h3>Output</h3>
+    <pre>
+The car is going as fast as it can!
+Max speed is: 200
+    </pre>
+    <h2>Static vs. Public</h2>
+    <p>Static method can be accessed without creating an object of the class.public method can only be accessed by objects.</p>
+    <h3>Example</h3>
+    <pre>
+public class Main {
+    // Static method
+    static void myStaticMethod() {
+        System.out.println("Static methods can be called without creating objects");
+    }
+          
+    // Public method
+    public void myPublicMethod() {
+        System.out.println("Public methods must be called by creating objects");
+    }
+          
+    // Main method
+    public static void main(String[] args) {
+        myStaticMethod(); // Call the static method
+          
+        Main myObj = new Main(); // Create an object of MyClass
+        myObj.myPublicMethod(); // Call the public method
+    }
+}
+    </pre>
+    <h3>Output</h3>
+    <pre>
+Static methods can be called without creating objects
+Public methods must be called by creating objects
+    </pre>
+    <h1>Java Constructors</h1>
+    <p>A constructor in Java is a special method that is used to initialize objects. The constructor is called when an object of a class is created. It can be used to set initial values for object attributes:</p>
+    <h3>Example</h3>
+    <pre>
+// Create a Main class
+public class Main {
+  int x;  // Create a class attribute
+
+  // Create a class constructor for the Main class
+  public Main() {
+    x = 5;  // Set the initial value for the class attribute x
+  }
+
+  public static void main(String[] args) {
+    Main myObj = new Main(); // Create an object of class Main (This will call the constructor)
+    System.out.println(myObj.x); // Print the value of x
+  }
+}
+
+// Outputs 5
+    </pre>
+    <h2>Constructor Parameters</h2>
+    <p>Constructors can also take parameters, which is used to initialize attributes.</p>
+    <p>The following example adds an int y parameter to the constructor. Inside the constructor we set x to y (x=y). When we call the constructor, we pass a parameter to the constructor (5), which will set the value of x to 5:</p>
+    <h3>Example</h3>
+    <pre>
+public class Main {
+    int x;
+          
+    public Main(int y) {
+        x = y;
+    }
+          
+    public static void main(String[] args) {
+        Main myObj = new Main(5);
+        System.out.println(myObj.x);
+    }
+}
+          
+// Outputs 5
+    </pre>
+    <h1>Access Modifiers</h1>
+    <ul>
+        <li><b>public :</b> The code is accessible for all classes</li>
+        <li><b>private :</b> The code is only accessible within the declared class</li>
+        <li><b>default :</b> The code is only accessible in the same package. This is used when you don't specify a modifier.</li>
+        <li><b>protected :</b> The code is accessible in the same package and subclasses.</li>
+    </ul>
+    <h1>Encapsulation</h1>
+    <p>The meaning of Encapsulation, is to make sure that "sensitive" data is hidden from users. To achieve this, you must:</p>
+    <ul>
+        <li>declare class variables/attributes as private</li>
+        <li>provide public get and set methods to access and update the value of a private variable</li>
+    </ul>
+    <h2>Get and Set</h2>
+    <p>You learned from the previous chapter that private variables can only be accessed within the same class (an outside class has no access to it). However, it is possible to access them if we provide public get and set methods.</p>
+    <p>The get method returns the variable value, and the set method sets the value.</p>
+    <p>Syntax for both is that they start with either get or set, followed by the name of the variable, with the first letter in upper case:</p>
+    <h3>Example</h3>
+    <pre>
+public class Person {
+    private String name; // private = restricted access
+          
+    // Getter
+    public String getName() {
+        return name;
+    }
+          
+    // Setter
+    public void setName(String newName) {
+        this.name = newName;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+      Person myObj = new Person();
+      myObj.setName("John"); // Set the value of the name variable to "John"
+      System.out.println(myObj.getName());
+    }
+}
+  
+// Outputs "John"
+    </pre>
+    <h2>Why Encapsulation?</h2>
+    <ul>
+        <li>Better control of class attributes and methods</li>
+        <li>Class attributes can be made read-only (if you only use the get method), or write-only (if you only use the set method)</li>
+        <li>Flexible: the programmer can change one part of the code without affecting other parts</li>
+        <li>Increased security of data</li>
+    </ul>
+    <h1>Java Inheritance (Subclass and Superclass)</h1>
+    <p>In Java, it is possible to inherit attributes and methods from one class to another. We group the "inheritance concept" into two categories:</p>
+    <ul>
+        <li>subclass (child) - the class that inherits from another class</li>
+        <li>superclass (parent) - the class being inherited from</li>
+    </ul>
+    <p>To inherit from a class, use the extends keyword.</p>
+    <p>In the example below, the Car class (subclass) inherits the attributes and methods from the Vehicle class (superclass):</p>
+    <h3>Example</h3>
+    <pre>
+class Vehicle {
+    protected String brand = "Ford";
+    public void honk() {
+        System.out.println("Tuut, tuut!");
+    }
+}
+          
+class Car extends Vehicle {
+    private String modelName = "Mustang";
+    public static void main(String[] args) {
+        Car myFastCar = new Car();
+        myFastCar.honk();
+        System.out.println(myFastCar.brand + " " + myFastCar.modelName);
+    }
+}
+    </pre>
+    <h3>Output</h3>
+    <pre>
+Tuut, tuut!
+Ford Mustang
+    </pre>
+    <h1>Java Polymorphism</h1>
+    <p>Polymorphism means "many forms", and it occurs when we have many classes that are related to each other by inheritance.</p>
+    <p>Like we specified in the previous chapter; Inheritance lets us inherit attributes and methods from another class. Polymorphism uses those methods to perform different tasks. This allows us to perform a single action in different ways.</p>
+    <h3>Example</h3>
+    <pre>
+class Animal {
+    public void animalSound() {
+        System.out.println("The animal makes a sound");
+    }
+    }
+          
+    class Pig extends Animal {
+    public void animalSound() {
+        System.out.println("The pig says: wee wee");
+    }
+    }
+          
+    class Dog extends Animal {
+    public void animalSound() {
+        System.out.println("The dog says: bow wow");
+    }
+    }
+          
+    class Main {
+    public static void main(String[] args) {
+        Animal myAnimal = new Animal();
+        Animal myPig = new Pig();
+        Animal myDog = new Dog();
+                  
+        myAnimal.animalSound();
+        myPig.animalSound();
+        myDog.animalSound();
+    }
+}
+    </pre>
+    <h3>Output</h3>
+    <pre>
+The animal makes a sound
+The pig says: wee wee
+The dog says: bow wow
+    </pre>
+    <h1>Abstract Classes and Methods</h1>
+    <p>Data abstraction is the process of hiding certain details and showing only essential information to the user.</p>
+    <p>Abstraction can be achieved with either abstract classes or interfaces (which you will learn more about in the next chapter).</p>
+    <p>The abstract keyword is a non-access modifier, used for classes and methods:</p>
+    <ul>
+        <li><b>Abstract class:</b> is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).</li>
+        <li><b>Abstract method:</b> can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from).</li>
+    </ul>
+    <p>An abstract class can have both abstract and regular methods.</p>
+    <h3>Example</h3>
+    <pre>
+// Abstract class
+abstract class Animal {
+  // Abstract method (does not have a body)
+  public abstract void animalSound();
+  // Regular method
+  public void sleep() {
+    System.out.println("Zzz");
+  }
+}
+
+// Subclass (inherit from Animal)
+class Pig extends Animal {
+  public void animalSound() {
+    // The body of animalSound() is provided here
+    System.out.println("The pig says: wee wee");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Pig myPig = new Pig(); // Create a Pig object
+    myPig.animalSound();
+    myPig.sleep();
+  }
+}
+    </pre>
+    <h3>Output</h3>
+    <pre>
+The pig says: wee wee
+Zzz
+    </pre>
+    <h1>Interfaces</h1>
+    <p>Another way to achieve abstraction in Java, is with interfaces.An interface is a completely "abstract class" that is used to group related methods with empty bodies</p>
+    <p>To access the interface methods, the interface must be "implemented" (kinda like inherited) by another class with the implements keyword (instead of extends). The body of the interface method is provided by the "implement" class:</p>
+    <h3>Example</h3>
+    <pre>
+interface Animal {
+    public void animalSound(); // interface method (does not have a body)
+    public void sleep(); // interface method (does not have a body)
+    }
+          
+    class Pig implements Animal {
+    public void animalSound() {
+        System.out.println("The pig says: wee wee");
+    }
+    public void sleep() {
+        System.out.println("Zzz");
+    }
+    }
+          
+    class Main {
+    public static void main(String[] args) {
+        Pig myPig = new Pig();
+        myPig.animalSound();
+        myPig.sleep();
+    }
+}
+    </pre>
+    <h3>Output</h3>
+    <pre>
+The pig says: wee wee
+Zzz
+    </pre>
+</body>
+</html>

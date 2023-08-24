@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Switch</title>
+    <link rel="stylesheet" href="D:\GeekVers\Home.css">
+    <style>
+        p,
+        pre,
+        ul,
+        ol {
+            font-size: large;
+        }
+        body{
+            background-color: rgb(222, 255, 222);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation menu -->
+    <div>
+        <img src="C:\Users\ASUS\Pictures\Logo.jpg" width="292" height="49">
+    </div>
+    <br><br>
+    <div style="background-color: rgb(28, 235, 28);">
+        <a href="D:\GeekVers\index.html" class="navmenu">Home</a>
+        <a href="D:\GeekVers\Tutorials\Tutorials.html" class="navmenu">Tutorials</a>
+        <a href="D:\GeekVers\Examples\Examples.html" class="navmenu">Examples</a>
+        <a href="D:\GeekVers\Questions\Questions.html" class="navmenu">Questions</a>
+        <a href="D:\GeekVers\Code Editor\Code editor.html" class="navmenu">Code Editor</a>
+        <a href="D:\GeekVers\Contact us\Contact.html" class="navmenu">Contact US</a>
+    </div><br>
+    <!-- C switch -->
+    <h1>C Switch</h1>
+    <h2>Switch Statement</h2>
+    <p>Instead of writing many if..else statements, you can use the switch statement.The switch statement selects one of many code blocks to be executed.</p>
+    <h3>Syntax</h3>
+    <pre>
+switch(expression) {
+case x:
+    // code block
+    break;
+case y:
+    // code block
+    break;
+default:
+    // code block
+}</pre>
+    <p><b>This is how it works:</b></p>
+    <ul>
+        <li>The switch expression is evaluated once</li>
+        <li>The value of the expression is compared with the values of each case</li>
+        <li>If there is a match, the associated block of code is executed</li>
+        <li>The break statement breaks out of the switch block and stops the execution</li>
+        <li>The default statement is optional, and specifies some code to run if there is no case match</li>
+    </ul>
+    <h3>Example</h3>
+    <pre>
+int day = 4;
+
+switch (day) {
+  case 1:
+    printf("Monday");
+    break;
+  case 2:
+    printf("Tuesday");
+    break;
+  case 3:
+    printf("Wednesday");
+    break;
+  case 4:
+    printf("Thursday");
+    break;
+  case 5:
+    printf("Friday");
+    break;
+  case 6:
+    printf("Saturday");
+    break;
+  case 7:
+    printf("Sunday");
+    break;
+  default:
+    printf("Looking forward to the Weekend");
+}
+
+// Outputs "Thursday" (day 4)
+    </pre>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Break and Continue</title>
+    <link rel="stylesheet" href="D:\GeekVers\Home.css">
+    <style>
+        p,pre,ul,ol{
+            font-size: large;
+        }
+        body{
+            background-color: rgb(222, 255, 222);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation menu -->
+    <div>
+        <img src="C:\Users\ASUS\Pictures\Logo.jpg" width="292" height="49">
+    </div>
+    <br><br>
+    <div style="background-color: rgb(28, 235, 28);">
+        <a href="D:\GeekVers\index.html" class="navmenu">Home</a>
+        <a href="D:\GeekVers\Tutorials\Tutorials.html" class="navmenu">Tutorials</a>
+        <a href="D:\GeekVers\Examples\Examples.html" class="navmenu">Examples</a>
+        <a href="D:\GeekVers\Questions\Questions.html" class="navmenu">Questions</a>
+        <a href="D:\GeekVers\Code Editor\Code editor.html" class="navmenu">Code Editor</a>
+        <a href="D:\GeekVers\Contact us\Contact.html" class="navmenu">Contact US</a>
+    </div><br>
+    <!-- Java break and continue -->
+    <h1>Java Break and Continue</h1>
+    <h2>Java Break</h2>
+    <p>You have already seen the break statement used in an earlier chapter of this tutorial. It was used to "jump out" of a switch statement.The break statement can also be used to jump out of a loop.</p>
+    <p>This example stops the loop when i is equal to 4:</p>
+    <h3>Example</h3>
+    <pre>
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 0; i < 10; i++) {
+        if (i == 4) {
+            break;
+        }
+        System.out.println(i);
+        }  
+    }
+}
+    </pre>
+    <h3>Output</h3>
+    <pre>
+0
+1
+2
+3
+    </pre>
+    <h2>Java Continue</h2>
+    <p>The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.</p>
+    <p>This example skips the value of 4:</p>
+    <h3>Example</h3>
+    <pre>
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 0; i < 10; i++) {
+        if (i == 4) {
+            continue;
+        }
+        System.out.println(i);
+        }  
+    }
+}
+    </pre>
+    <h3>Output</h3>
+    <pre>
+0
+1
+2
+3
+5
+6
+7
+8
+9
+    </pre>
+</body>
+</html>

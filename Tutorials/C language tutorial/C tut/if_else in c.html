@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C if...else</title>
+    <link rel="stylesheet" href="D:\GeekVers\Home.css">
+    <style>
+        p,
+        pre,
+        ul,
+        ol {
+            font-size: large;
+        }
+        body{
+            background-color: rgb(222, 255, 222);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation menu -->
+    <div>
+        <img src="C:\Users\ASUS\Pictures\Logo.jpg" width="292" height="49">
+    </div>
+    <br><br>
+    <div style="background-color: rgb(28, 235, 28);">
+        <a href="D:\GeekVers\index.html" class="navmenu">Home</a>
+        <a href="D:\GeekVers\Tutorials\Tutorials.html" class="navmenu">Tutorials</a>
+        <a href="D:\GeekVers\Examples\Examples.html" class="navmenu">Examples</a>
+        <a href="D:\GeekVers\Questions\Questions.html" class="navmenu">Questions</a>
+        <a href="D:\GeekVers\Code Editor\Code editor.html" class="navmenu">Code Editor</a>
+        <a href="D:\GeekVers\Contact us\Contact.html" class="navmenu">Contact US</a>
+    </div><br>
+    <!-- C if...else -->
+    <h1>C If ... Else</h1>
+    <h2>Conditions and If Statements</h2>
+    <p>You have already learned that C supports the usual logical conditions from mathematics:</p>
+    <ul>
+        <li>Less than: a &lt; b</li>
+        <li>Less than or equal to: a &lt;= b</li>
+        <li>Greater than: a > b</li>
+        <li>Greater than or equal to: a >= b</li>
+        <li>Equal to a == b</li>
+        <li>Not Equal to: a != b</li>
+    </ul>
+    <p>You can use these conditions to perform different actions for different decisions.</p>
+    <p>C has the following conditional statements:</p>
+    <ul>
+        <li>Use if to specify a block of code to be executed, if a specified condition is true</li>
+        <li>Use else to specify a block of code to be executed, if the same condition is false</li>
+        <li>Use else if to specify a new condition to test, if the first condition is false</li>
+        <li>Use switch to specify many alternative blocks of code to be executed</li>
+    </ul>
+    <h2>The if Statement</h2>
+    <p>Use the if statement to specify a block of code to be executed if a condition is true.</p>
+    <h3>Syntax</h3>
+    <pre>
+if (condition) {
+    // block of code to be executed if the condition is true
+}
+    </pre>
+    <h3>Example</h3>
+    <pre>
+if (20 > 18) {
+    printf("20 is greater than 18");
+}
+    </pre>
+    <h3>Output</h3>
+    <p>20 is greater than 18</p>
+    <h2>The else Statement</h2>
+    <p>Use the else statement to specify a block of code to be executed if the condition is false.</p>
+    <h3>Syntax</h3>
+<pre>
+if (condition) {
+    // block of code to be executed if the condition is true
+} else {
+    // block of code to be executed if the condition is false
+}
+</pre>
+    <h3>Example</h3>
+    <pre>
+int time = 20;
+if (time &lt; 18) {
+  printf("Good day.");
+} else {
+  printf("Good evening.");
+}
+// Outputs "Good evening."
+    </pre>
+    <h2>The else if Statement</h2>
+    <p>Use the else if statement to specify a new condition if the first condition is false.</p>
+    <h3>Syntax</h3>
+    <pre>
+if (condition1) {
+    // block of code to be executed if condition1 is true
+} else if (condition2) {
+    // block of code to be executed if the condition1 is false and condition2 is true
+} else {
+    // block of code to be executed if the condition1 is false and condition2 is false
+}
+    </pre>
+    <h3>Example</h3>
+    <pre>
+int time = 22;
+if (time < 10) {
+  printf("Good morning.");
+} else if (time < 20) {
+  printf("Good day.");
+} else {
+  printf("Good evening.");
+}
+// Outputs "Good evening."
+    </pre>
+</body>
+</html>

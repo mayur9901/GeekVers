@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Data Types</title>
+    <link rel="stylesheet" href="D:\GeekVers\Home.css">
+    <style>
+        p,
+        pre,
+        ul,
+        ol {
+            font-size: large;
+        }
+        body{
+            background-color: rgb(222, 255, 222);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation menu -->
+    <div>
+        <img src="C:\Users\ASUS\Pictures\Logo.jpg" width="292" height="49">
+    </div>
+    <br><br>
+    <div style="background-color: rgb(28, 235, 28);">
+        <a href="D:\GeekVers\index.html" class="navmenu">Home</a>
+        <a href="D:\GeekVers\Tutorials\Tutorials.html" class="navmenu">Tutorials</a>
+        <a href="D:\GeekVers\Examples\Examples.html" class="navmenu">Examples</a>
+        <a href="D:\GeekVers\Questions\Questions.html" class="navmenu">Questions</a>
+        <a href="D:\GeekVers\Code Editor\Code editor.html" class="navmenu">Code Editor</a>
+        <a href="D:\GeekVers\Contact us\Contact.html" class="navmenu">Contact US</a>
+    </div>
+    <!-- C data types -->
+    <h1>Data Types</h1>
+    <p>
+        As explained in the Variables chapter, a variable in C must be a specified data type, and you must use a format
+        specifier inside the printf() function to display it.
+    </p>
+    <h2>Example</h2>
+    <pre>
+// Create variables
+int myNum = 5;             // Integer (whole number)
+float myFloatNum = 5.99;   // Floating point number
+char myLetter = 'D';       // Character
+        
+// Print variables
+printf("%d\n", myNum);
+printf("%f\n", myFloatNum);
+printf("%c\n", myLetter);
+    </pre>
+    <h3>Output</h3>
+    <pre>
+5
+5.990000
+D
+    </pre>
+    <h2>Basic Data Types</h2>
+    <p>The data type specifies the size and type of information the variable will store.</p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Data Type</th>
+                <th>Size</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>int</td>
+                <td>2 or 4 bytes</td>
+                <td>Stores whole numbers, without decimals</td>
+            </tr>
+            <tr>
+                <td>float</td>
+                <td>4 bytes</td>
+                <td>Stores fractional numbers, containing one or more decimals. Sufficient for storing 6-7 decimal digits</td>
+            </tr>
+            <tr>
+                <td>double</td>
+                <td>8 bytes</td>
+                <td>Stores fractional numbers, containing one or more decimals. Sufficient for storing 15 decimal digits</td>
+            </tr>
+            <tr>
+                <td>char</td>
+                <td>1 byte</td>
+                <td>Stores a single character/letter/number, or ASCII values</td>
+            </tr>
+        </tbody>
+    </table>
+    <h1>Type Conversion</h1>
+    <p>
+        Sometimes, you have to convert the value of one data type to another type. This is known as type conversion.
+    </p>
+    <p>
+        For example, if you try to divide two integers, 5 by 2, you would expect the result to be 2.5. But since we are working with integers (and not floating-point values), the following example will just output 2.
+    </p>
+    <h2>Example</h2>
+    <pre>
+int x = 5;
+int y = 2;
+int sum = 5 / 2;
+        
+printf("%d", sum); // Outputs 2
+    </pre>
+    <p><b>There are two types of conversion in C:</b></p>
+    <ul>
+        <li>Implicit Conversion (automatically)</li>
+        <li>Explicit Conversion (manually)</li>
+    </ul>
+    <h2>Implicit Conversion</h2>
+    <p>Implicit conversion is done automatically by the compiler when you assign a value of one type to another.For example, if you assign an int value to a float type.</p>
+    <h3>Example</h3>
+    <pre>
+// Automatic conversion: int to float
+float myFloat = 9;
+
+printf("%f", myFloat); // Output : 9.000000
+    </pre>
+    <h2>Explicit Conversion</h2>
+    <p>Explicit conversion is done manually by placing the type in parentheses () in front of the value.</p>
+    <h3>Example</h3>
+    <pre>
+// Manual conversion: int to float
+float sum = (float) 5 / 2;
+        
+printf("%f", sum); // output : 2.500000
+    </pre>
+</body>
+
+</html>

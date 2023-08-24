@@ -1,0 +1,9 @@
+*{
+    /* Navigation menu style */
+    .navmenu {
+        background-color: rgb(28, 235, 28);
+        padding-right: 15px;
+        font-size: 22px;
+        text-decoration: none;
+    }
+}

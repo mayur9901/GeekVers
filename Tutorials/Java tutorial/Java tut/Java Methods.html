@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Methods</title>
+    <link rel="stylesheet" href="D:\GeekVers\Home.css">
+    <style>
+        p,pre,ul,ol{
+            font-size: large;
+        }
+        body{
+            background-color: rgb(222, 255, 222);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation menu -->
+    <div>
+        <img src="C:\Users\ASUS\Pictures\Logo.jpg" width="292" height="49">
+    </div>
+    <br><br>
+    <div style="background-color: rgb(28, 235, 28);">
+        <a href="D:\GeekVers\index.html" class="navmenu">Home</a>
+        <a href="D:\GeekVers\Tutorials\Tutorials.html" class="navmenu">Tutorials</a>
+        <a href="D:\GeekVers\Examples\Examples.html" class="navmenu">Examples</a>
+        <a href="D:\GeekVers\Questions\Questions.html" class="navmenu">Questions</a>
+        <a href="D:\GeekVers\Code Editor\Code editor.html" class="navmenu">Code Editor</a>
+        <a href="D:\GeekVers\Contact us\Contact.html" class="navmenu">Contact US</a>
+    </div><br>
+    <!-- Java methods -->
+    <h1>Java Methods</h1>
+    <p>A method is a block of code which only runs when it is called.You can pass data, known as parameters, into a method.Methods are used to perform certain actions, and they are also known as functions.</p>
+    <p>Why use methods? To reuse code: define the code once, and use it many times.</p>
+    <h2>Create a Method</h2>
+    <p>A method must be declared within a class. It is defined with the name of the method, followed by parentheses (). Java provides some pre-defined methods, such as System.out.println(), but you can also create your own methods to perform certain actions:</p>
+    <h3>Example</h3>
+    <pre>
+public class Main {
+    static void myMethod() {
+        // code to be executed
+    }
+}
+    </pre>
+    <h2>Call a Method</h2>
+    <p>To call a method in Java, write the method's name followed by two parentheses () and a semicolon;In the following example, myMethod() is used to print a text (the action), when it is called:</p>
+    <h3>Example</h3>
+    <pre>
+public class Main {
+    static void myMethod() {
+        System.out.println("I just got executed!");
+    }
+          
+    public static void main(String[] args) {
+        myMethod();
+    }
+}
+          
+// Outputs "I just got executed!"
+    </pre>
+    <h2>Parameters and Arguments</h2>
+    <p>Information can be passed to methods as parameter. Parameters act as variables inside the method.</p>
+    <p>Parameters are specified after the method name, inside the parentheses. You can add as many parameters as you want, just separate them with a comma.</p>
+    <p>The following example has a method that takes a String called fname as parameter. When the method is called, we pass along a first name, which is used inside the method to print the full name:</p>
+    <h3>Example</h3>
+    <pre>
+public class Main {
+    static void myMethod(String fname) {
+        System.out.println(fname + " Refsnes");
+    }
+          
+    public static void main(String[] args) {
+        myMethod("Liam");
+        myMethod("Jenny");
+        myMethod("Anja");
+    }
+}
+// Liam Refsnes
+// Jenny Refsnes
+// Anja Refsnes
+    </pre>
+    <h2>Return Values</h2>
+    <p>The void keyword, used in the examples above, indicates that the method should not return a value. If you want the method to return a value, you can use a primitive data type (such as int, char, etc.) instead of void, and use the return keyword inside the method:</p>
+    <h3>Example</h3>
+    <pre>
+public class Main {
+    static int myMethod(int x, int y) {
+        return x + y;
+    }
+          
+    public static void main(String[] args) {
+        System.out.println(myMethod(5, 3));
+    }
+}
+// Outputs 8 (5 + 3)
+    </pre>
+    <h2>Java Recursion</h2>
+    <p>Recursion is the technique of making a function call itself. This technique provides a way to break complicated problems down into simple problems which are easier to solve.</p>
+    <p>Recursion may be a bit difficult to understand. The best way to figure out how it works is to experiment with it.</p>
+    <h2>Recursion Example</h2>
+    <p>Adding two numbers together is easy to do, but adding a range of numbers is more complicated. In the following example, recursion is used to add a range of numbers together by breaking it down into the simple task of adding two numbers:</p>
+    <h3>Example</h3>
+    <pre>
+public class Main {
+    public static void main(String[] args) {
+        int result = sum(10);
+        System.out.println(result);
+    }
+    public static int sum(int k) {
+        if (k > 0) {
+        return k + sum(k - 1);
+        } else {
+        return 0;
+        }
+    }
+}
+    </pre>
+    <h3>Output</h3>
+    <p>55</p>
+    <h2>Method Overloading</h2>
+    <p>With method overloading, multiple methods can have the same name with different parameters:</p>
+    <p>Consider the following example, which has two methods that add numbers of different type:</p>
+    <h3>Example</h3>
+    <pre>
+public class Main {
+    static int plusMethodInt(int x, int y) {
+        return x + y;
+    }
+            
+    static double plusMethodDouble(double x, double y) {
+        return x + y;
+    }
+            
+    public static void main(String[] args) {
+        int myNum1 = plusMethodInt(8, 5);
+        double myNum2 = plusMethodDouble(4.3, 6.26);
+        System.out.println("int: " + myNum1);
+        System.out.println("double: " + myNum2);
+    }
+}
+    </pre>
+    <h3>Output</h3>
+    <pre>
+int: 13
+double: 10.559999999999999
+    </pre>
+</body>
+</html>

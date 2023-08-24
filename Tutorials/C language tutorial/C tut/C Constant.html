@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Constants</title>
+    <link rel="stylesheet" href="D:\GeekVers\Home.css">
+    <style>
+        p,
+        pre,
+        ul,
+        ol {
+            font-size: large;
+        }
+        body{
+            background-color: rgb(222, 255, 222);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation menu -->
+    <div>
+        <img src="C:\Users\ASUS\Pictures\Logo.jpg" width="292" height="49">
+    </div>
+    <br><br>
+    <div style="background-color: rgb(28, 235, 28);">
+        <a href="D:\GeekVers\index.html" class="navmenu">Home</a>
+        <a href="D:\GeekVers\Tutorials\Tutorials.html" class="navmenu">Tutorials</a>
+        <a href="D:\GeekVers\Examples\Examples.html" class="navmenu">Examples</a>
+        <a href="D:\GeekVers\Questions\Questions.html" class="navmenu">Questions</a>
+        <a href="D:\GeekVers\Code Editor\Code editor.html" class="navmenu">Code Editor</a>
+        <a href="D:\GeekVers\Contact us\Contact.html" class="navmenu">Contact US</a>
+    </div><br>
+    <!-- C constant -->
+    <h1>Constants</h1>
+    <p>
+        If you don't want others (or yourself) to change existing variable values, you can use the const keyword.This will declare the variable as "constant", which means unchangeable and read-only.When you declare a constant variable, it must be assigned with a value.
+    </p>
+    <p>
+        You should always declare the variable as constant when you have values that are unlikely to change.
+    </p>
+    <h2>Example</h2>
+    <pre>   
+#include &lt;stdio.h&gt;
+
+int main() {
+    const int minutesPerHour = 60;
+    const float PI = 3.14;
+            
+    printf("%d\n", minutesPerHour);
+    printf("%f\n", PI);
+    return 0;
+}
+    </pre>
+    <h3>Output</h3>
+    <pre>
+60
+3.1400
+    </pre>
+</body>
+</html>

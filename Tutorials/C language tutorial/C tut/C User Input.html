@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C User Input</title>
+    <link rel="stylesheet" href="D:\GeekVers\Home.css">
+    <style>
+        p,
+        pre,
+        ul,
+        ol {
+            font-size: large;
+        }
+        body{
+            background-color: rgb(222, 255, 222);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation menu -->
+    <div>
+        <img src="C:\Users\ASUS\Pictures\Logo.jpg" width="292" height="49">
+    </div>
+    <br><br>
+    <div style="background-color: rgb(28, 235, 28);">
+        <a href="D:\GeekVers\index.html" class="navmenu">Home</a>
+        <a href="D:\GeekVers\Tutorials\Tutorials.html" class="navmenu">Tutorials</a>
+        <a href="D:\GeekVers\Examples\Examples.html" class="navmenu">Examples</a>
+        <a href="D:\GeekVers\Questions\Questions.html" class="navmenu">Questions</a>
+        <a href="D:\GeekVers\Code Editor\Code editor.html" class="navmenu">Code Editor</a>
+        <a href="D:\GeekVers\Contact us\Contact.html" class="navmenu">Contact US</a>
+    </div><br>
+    <!-- C user input -->
+    <h1>User Input</h1>
+    <p>To get user input, you can use the scanf() function</p>
+    <h3>Example</h3>
+    <pre>
+#include &lt;stdio.h>
+
+    int main() {
+        // Create an integer variable that will store the number we get from the user
+        int myNum;
+            
+        // Ask the user to type a number
+        printf("Type a number and press enter: \n"); 
+            
+        // Get and save the number the user types
+        scanf("%d", &myNum);
+            
+        // Print the number the user typed
+        printf("Your number is: %d", myNum);
+            
+        return 0;
+    }
+    </pre>
+    <h3>Output</h3>
+    <p>Type a number and press enter: <b>3</b></p>
+    <p>Your number is: 3</p>
+</body>
+</html>

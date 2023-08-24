@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Arrays</title>
+    <link rel="stylesheet" href="D:\GeekVers\Home.css">
+    <style>
+        p,pre,ul,ol{
+            font-size: large;
+        }
+        body{
+            background-color: rgb(222, 255, 222);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation menu -->
+    <div>
+        <img src="C:\Users\ASUS\Pictures\Logo.jpg" width="292" height="49">
+    </div>
+    <br><br>
+    <div style="background-color: rgb(28, 235, 28);">
+        <a href="D:\GeekVers\index.html" class="navmenu">Home</a>
+        <a href="D:\GeekVers\Tutorials\Tutorials.html" class="navmenu">Tutorials</a>
+        <a href="D:\GeekVers\Examples\Examples.html" class="navmenu">Examples</a>
+        <a href="D:\GeekVers\Questions\Questions.html" class="navmenu">Questions</a>
+        <a href="D:\GeekVers\Code Editor\Code editor.html" class="navmenu">Code Editor</a>
+        <a href="D:\GeekVers\Contact us\Contact.html" class="navmenu">Contact US</a>
+    </div><br>
+    <!-- Java array -->
+    <h1>Java Arrays</h1>
+    <p>Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.To declare an array, define the variable type with square brackets.</p>
+    <p>To create an array of integers, you could write:</p>
+    <p>int[] myNum = {10, 20, 30, 40};</p>
+    <h2>Access the Elements of an Array</h2>
+    <p>You can access an array element by referring to the index number.This statement accesses the value of the first element in cars:</p>
+    <h3>Example</h3>
+    <pre>
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+System.out.println(cars[0]);
+// Outputs Volvo
+    </pre>
+    <h2>Change an Array Element</h2>
+    <p>To change the value of a specific element, refer to the index number:</p>
+    <h3>Example</h3>
+    <pre>
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+cars[0] = "Opel";
+System.out.println(cars[0]);
+// Now outputs Opel instead of Volvo
+    </pre>
+    <h2>Array Length</h2>
+    <p>To find out how many elements an array has, use the length property:</p>
+    <h3>Example</h3>
+    <pre>
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+System.out.println(cars.length);
+// Outputs 4
+    </pre>
+    <h2>Loop Through an Array</h2>
+    <p>You can loop through the array elements with the for loop, and use the length property to specify how many times the loop should run.</p>
+    <p>The following example outputs all elements in the cars array:</p>
+    <h3>Example</h3>
+    <pre>
+public class Main {
+    public static void main(String[] args) {
+        String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+        for (int i = 0; i < cars.length; i++) {
+        System.out.println(cars[i]);
+        }
+    }
+}
+    </pre>
+    <h3>Output</h3>
+    <pre>
+Volvo
+BMW
+Ford
+Mazda
+    </pre>
+</body>
+</html>

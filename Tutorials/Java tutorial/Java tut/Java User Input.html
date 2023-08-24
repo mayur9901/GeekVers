@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java User Input</title>
+    <link rel="stylesheet" href="D:\GeekVers\Home.css">
+    <style>
+        p,pre,ul,ol{
+            font-size: large;
+        }
+        body{
+            background-color: rgb(222, 255, 222);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation menu -->
+    <div>
+        <img src="C:\Users\ASUS\Pictures\Logo.jpg" width="292" height="49">
+    </div>
+    <br><br>
+    <div style="background-color: rgb(28, 235, 28);">
+        <a href="D:\GeekVers\index.html" class="navmenu">Home</a>
+        <a href="D:\GeekVers\Tutorials\Tutorials.html" class="navmenu">Tutorials</a>
+        <a href="D:\GeekVers\Examples\Examples.html" class="navmenu">Examples</a>
+        <a href="D:\GeekVers\Questions\Questions.html" class="navmenu">Questions</a>
+        <a href="D:\GeekVers\Code Editor\Code editor.html" class="navmenu">Code Editor</a>
+        <a href="D:\GeekVers\Contact us\Contact.html" class="navmenu">Contact US</a>
+    </div><br>
+    <!-- Java user input -->
+    <h1>Java User Input</h1>
+    <p>The Scanner class is used to get user input, and it is found in the java.util package.
+        To use the Scanner class, create an object of the class and use any of the available methods found in the Scanner class documentation. In our example, we will use the nextLine() method, which is used to read Strings:</p>
+        <h3>Example</h3>
+        <pre>
+import java.util.Scanner; // import the Scanner class 
+
+class Main {
+  public static void main(String[] args) {
+    Scanner myObj = new Scanner(System.in);
+    String userName;
+    
+    // Enter username and press Enter
+    System.out.println("Enter username"); 
+    userName = myObj.nextLine();   
+       
+    System.out.println("Username is: " + userName);        
+  }
+}
+        </pre>
+        <h3>Output</h3>
+        <pre>
+Enter username
+<b>abc</b>
+Username is: abc
+        </pre>
+        <h2>Input Types</h2>
+        <ul>
+            <li>nextBoolean() : Reads a boolean value from the user</li>
+            <li>nextByte() : Reads a byte value from the user</li>
+            <li>nextDouble() : Reads a double value from the user</li>
+            <li>nextFloat() : Reads a float value from the user</li>
+            <li>nextInt() : Reads a int value from the user</li>
+            <li>nextLine() : Reads a String value from the user</li>
+            <li>nextLong() : Reads a long value from the user</li>
+            <li>nextShort() : Reads a short value from the user</li>
+        </ul>
+</body>
+</html>

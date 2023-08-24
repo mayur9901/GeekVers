@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Array</title>
+    <link rel="stylesheet" href="D:\GeekVers\Home.css">
+    <style>
+        p,
+        pre,
+        ul,
+        ol {
+            font-size: large;
+        }
+        body{
+            background-color: rgb(222, 255, 222);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation menu -->
+    <div>
+        <img src="C:\Users\ASUS\Pictures\Logo.jpg" width="292" height="49">
+    </div>
+    <br><br>
+    <div style="background-color: rgb(28, 235, 28);">
+        <a href="D:\GeekVers\index.html" class="navmenu">Home</a>
+        <a href="D:\GeekVers\Tutorials\Tutorials.html" class="navmenu">Tutorials</a>
+        <a href="D:\GeekVers\Examples\Examples.html" class="navmenu">Examples</a>
+        <a href="D:\GeekVers\Questions\Questions.html" class="navmenu">Questions</a>
+        <a href="D:\GeekVers\Code Editor\Code editor.html" class="navmenu">Code Editor</a>
+        <a href="D:\GeekVers\Contact us\Contact.html" class="navmenu">Contact US</a>
+    </div><br>
+    <!-- C arrays -->
+    <h1>Arrays</h1>
+    <p>Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.To create an array, define the data type (like int) and specify the name of the array followed by square brackets [].</p>
+    <p>To insert values to it, use a comma-separated list, inside curly braces:</p>
+    <h3>Syntax</h3>
+    <p>int myNumbers[] = {25, 50, 75, 100};</p><br>
+    <p>We have now created a variable that holds an array of four integers.</p>
+    <h2>Access the Elements of an Array</h2>
+    <p>To access an array element, refer to its index number.Array indexes start with 0: [0] is the first element. [1] is the second element, etc.</p>
+    <p>This statement accesses the value of the first element [0] in myNumbers:</p>
+    <h3>Example</h3>
+    <pre>
+int myNumbers[] = {25, 50, 75, 100};
+printf("%d", myNumbers[0]);
+
+// Outputs 25
+    </pre>
+    <h2>Change an Array Element</h2>
+    <p>To change the value of a specific element, refer to the index number:</p>
+    <h3>Example</h3>
+    <pre>
+int myNumbers[] = {25, 50, 75, 100};
+myNumbers[0] = 33;
+
+printf("%d", myNumbers[0]);
+
+// Now outputs <b>33</b> instead of <b>25</b>
+    </pre>
+    <h2>Loop Through an Array</h2>
+    <p>You can loop through the array elements with the for loop.</p>
+    <p>The following example outputs all elements in the myNumbers array:</p>
+    <h3>Example</h3>
+    <pre>
+#include &lt;stdio.h>
+
+    int main() {
+        int myNumbers[] = {25, 50, 75, 100};
+        int i;
+              
+        for (i = 0; i < 4; i++) {
+        printf("%d\n", myNumbers[i]);
+        }
+             
+        return 0;
+    }
+    </pre>
+    <h3>Output</h3>
+    <pre>
+25
+50
+75
+100
+    </pre>
+</body>
+</html>

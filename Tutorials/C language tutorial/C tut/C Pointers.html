@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Pointers</title>
+    <link rel="stylesheet" href="D:\GeekVers\Home.css">
+    <style>
+        p,
+        pre,
+        ul,
+        ol {
+            font-size: large;
+        }
+        body{
+            background-color: rgb(222, 255, 222);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation menu -->
+    <div>
+        <img src="C:\Users\ASUS\Pictures\Logo.jpg" width="292" height="49">
+    </div>
+    <br><br>
+    <div style="background-color: rgb(28, 235, 28);">
+        <a href="D:\GeekVers\index.html" class="navmenu">Home</a>
+        <a href="D:\GeekVers\Tutorials\Tutorials.html" class="navmenu">Tutorials</a>
+        <a href="D:\GeekVers\Examples\Examples.html" class="navmenu">Examples</a>
+        <a href="D:\GeekVers\Questions\Questions.html" class="navmenu">Questions</a>
+        <a href="D:\GeekVers\Code Editor\Code editor.html" class="navmenu">Code Editor</a>
+        <a href="D:\GeekVers\Contact us\Contact.html" class="navmenu">Contact US</a>
+    </div><br>
+    <!-- C pointers -->
+    <h1>Pointers</h1>
+    <p>A pointer is a variable that stores the memory address of another variable as its value.</p>
+    <p>A pointer variable points to a data type (like int) of the same type, and is created with the * operator.</p>
+    <p>The address of the variable you are working with is assigned to the pointer.</p>
+    <h2>Example</h2>
+    <pre>
+#include &lt;stdio.h>
+
+    int main() {
+        int myAge = 43;  // An int variable
+        int* ptr = &myAge;  // A pointer variable, with the name ptr, that stores the addresof myAge
+            
+        // Output the value of myAge (43)
+        printf("%d\n", myAge);
+            
+        // Output the memory address of myAge (0x7ffe5367e044)
+        printf("%p\n", &myAge);
+            
+        // Output the memory address of myAge with the pointer (0x7ffe5367e044)
+        printf("%p\n", ptr);
+            
+        return 0;
+    }
+    </pre>
+    <h3>Output</h3>
+    <pre>
+43
+0x7ffe5367e044
+0x7ffe5367e044
+    </pre>
+</body>
+</html>

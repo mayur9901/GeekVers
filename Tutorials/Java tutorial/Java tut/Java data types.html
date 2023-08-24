@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Data Types</title>
+    <link rel="stylesheet" href="D:\GeekVers\Home.css">
+    <style>
+        p,pre,ul,ol{
+            font-size: large;
+        }
+        pre{
+            font-size: large;
+        }
+        body{
+            background-color: rgb(222, 255, 222);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation menu -->
+    <div>
+        <img src="C:\Users\ASUS\Pictures\Logo.jpg" width="292" height="49">
+    </div>
+    <br><br>
+    <div style="background-color: rgb(28, 235, 28);">
+        <a href="D:\GeekVers\index.html" class="navmenu">Home</a>
+        <a href="D:\GeekVers\Tutorials\Tutorials.html" class="navmenu">Tutorials</a>
+        <a href="D:\GeekVers\Examples\Examples.html" class="navmenu">Examples</a>
+        <a href="D:\GeekVers\Questions\Questions.html" class="navmenu">Questions</a>
+        <a href="D:\GeekVers\Code Editor\Code editor.html" class="navmenu">Code Editor</a>
+        <a href="D:\GeekVers\Contact us\Contact.html" class="navmenu">Contact US</a>
+    </div><br>
+    <!-- Java data types -->
+    <h1>Java Data Types</h1>
+    <p>As explained in the previous chapter, a variable in Java must be a specified data type:</p>
+    <h2>Basic Data Types</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Data Type</th>
+                <th>Size</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>int</td>
+                <td>2 or 4 bytes</td>
+                <td>Stores whole numbers, without decimals</td>
+            </tr>
+            <tr>
+                <td>float</td>
+                <td>4 bytes</td>
+                <td>Stores fractional numbers, containing one or more decimals. Sufficient for storing 6-7 decimal digits</td>
+            </tr>
+            <tr>
+                <td>double</td>
+                <td>8 bytes</td>
+                <td>Stores fractional numbers, containing one or more decimals. Sufficient for storing 15 decimal digits</td>
+            </tr>
+            <tr>
+                <td>char</td>
+                <td>1 byte</td>
+                <td>Stores a single character/letter/number, or ASCII values</td>
+            </tr>
+        </tbody>
+    </table>
+    <h1>Java Type Casting</h1>
+    <p>Type casting is when you assign a value of one primitive data type to another type.In Java, there are two types of casting:</p>
+    <ul>
+        <li>Widening Casting (automatically) - converting a smaller type to a larger type size byte -> short -> char -> int -> long -> float -> double</li>
+        <li>Narrowing Casting (manually) - converting a larger type to a smaller size type
+            double -> float -> long -> int -> char -> short -> byte</li>
+        </ul>
+            <h2>Widening Casting</h2>
+            <p>Widening casting is done automatically when passing a smaller size type to a larger size type:</p>
+            <h3>Example</h3>
+            <pre>
+public class Main {
+    public static void main(String[] args) {
+        int myInt = 9;
+        double myDouble = myInt; // Automatic casting: int to double
+                  
+        System.out.println(myInt);      // Outputs 9
+        System.out.println(myDouble);   // Outputs 9.0
+    }
+}
+            </pre>
+            <h2>Narrowing Casting</h2>
+            <p>Narrowing casting must be done manually by placing the type in parentheses in front of the value:</p>
+            <h3>Example</h3>
+            <pre>
+public class Main {
+    public static void main(String[] args) {
+        double myDouble = 9.78d;
+        int myInt = (int) myDouble; // Manual casting: double to int
+                  
+        System.out.println(myDouble);   // Outputs 9.78
+        System.out.println(myInt);      // Outputs 9
+    }
+}                  
+            </pre>
+</body>
+</html>

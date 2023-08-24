@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Loops</title>
+    <link rel="stylesheet" href="D:\GeekVers\Home.css">
+    <style>
+        p,pre,ul,ol{
+            font-size: large;
+        }
+        body{
+            background-color: rgb(222, 255, 222);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation menu -->
+    <div>
+        <img src="C:\Users\ASUS\Pictures\Logo.jpg" width="292" height="49">
+    </div>
+    <br><br>
+    <div style="background-color: rgb(28, 235, 28);">
+        <a href="D:\GeekVers\index.html" class="navmenu">Home</a>
+        <a href="D:\GeekVers\Tutorials\Tutorials.html" class="navmenu">Tutorials</a>
+        <a href="D:\GeekVers\Examples\Examples.html" class="navmenu">Examples</a>
+        <a href="D:\GeekVers\Questions\Questions.html" class="navmenu">Questions</a>
+        <a href="D:\GeekVers\Code Editor\Code editor.html" class="navmenu">Code Editor</a>
+        <a href="D:\GeekVers\Contact us\Contact.html" class="navmenu">Contact US</a>
+    </div><br>
+    <!-- Java loops -->
+    <h1>Java Loops</h1>
+    <p>Loops can execute a block of code as long as a specified condition is reached.Loops are handy because they save time, reduce errors, and they make code more readable.</p>
+    <h2>Java While Loop</h2>
+    <p>The while loop loops through a block of code as long as a specified condition is true:</p>
+    <h3>Syntax</h3>
+    <pre>
+while (condition) {
+    // code block to be executed
+}
+    </pre>
+    <p>In the example below, the code in the loop will run, over and over again, as long as a variable (i) is less than 5:</p>
+    <h3>Example</h3>
+    <pre>
+public class Main {
+    public static void main(String[] args) {
+        int i = 0;
+        while (i < 5) {
+        System.out.println(i);
+        i++;
+        }  
+    }
+}
+    </pre>
+    <h3>Output</h3>
+    <pre>
+0
+1
+2
+3
+4
+    </pre>
+    <h2>The Do/While Loop</h2>
+    <p>The do/while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.</p>
+    <h3>Syntax</h3>
+    <pre>
+do {
+    // code block to be executed
+}
+while (condition);
+    </pre>
+    <p>The example below uses a do/while loop. The loop will always be executed at least once, even if the condition is false, because the code block is executed before the condition is tested:</p>
+    <h3>Example</h3>
+    <pre>
+public class Main {
+    public static void main(String[] args) {
+        int i = 0;
+        do {
+        System.out.println(i);
+        i++;
+        }
+        while (i < 5);  
+    }
+}
+    </pre>
+    <h3>Output</h3>
+    <pre>
+0
+1
+2
+3
+4
+    </pre>
+    <h2>Java For Loop</h2>
+    <p>When you know exactly how many times you want to loop through a block of code, use the for loop instead of a while loop:</p>
+    <h3>Syntax</h3>
+    <pre>
+for (statement 1; statement 2; statement 3) {
+    // code block to be executed
+}
+    </pre>
+    <p>Statement 1 is executed (one time) before the execution of the code block.</p>
+    <p>Statement 2 defines the condition for executing the code block.</p>
+    <p>Statement 3 is executed (every time) after the code block has been executed.</p>
+    <p>The example below will print the numbers 0 to 4:</p>
+    <h3>Example</h3>
+    <pre>
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 0; i < 5; i++) {
+        System.out.println(i);
+        }  
+    }
+}
+    </pre>
+    <h3>Output</h3>
+    <pre>
+0
+1
+2
+3
+4
+    </pre>
+    <h2>Nested Loops</h2>
+    <p>It is also possible to place a loop inside another loop. This is called a nested loop.The "inner loop" will be executed one time for each iteration of the "outer loop":</p>
+    <pre>
+public class Main {
+    public static void main(String[] args) {
+        // Outer loop.
+        for (int i = 1; i <= 2; i++) {
+        System.out.println("Outer: " + i); // Executes 2 times
+                
+        // Inner loop
+        for (int j = 1; j <= 3; j++) {
+            System.out.println(" Inner: " + j); // Executes 6 times (2 * 3)
+        }
+        } 
+    }
+}
+    </pre>
+    <h3>Output</h3>
+    <pre>
+Outer: 1
+ Inner: 1
+ Inner: 2
+ Inner: 3
+Outer: 2
+ Inner: 1
+ Inner: 2
+ Inner: 3
+    </pre>
+</body>
+</html>
